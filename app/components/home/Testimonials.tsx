@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 
 const testimonials = [
   {
-    text: "MaisonPartout a transformé la façon dont je gère ma location. C'est tellement simple et efficace !",
+    text: "Sam-Host a transformé la façon dont je gère ma location. C'est tellement simple et efficace !",
     author: "Sophie D., Propriétaire à Paris"
   },
   {
-    text: "Grâce à MaisonPartout, mes revenus locatifs ont augmenté de 30% sans aucun effort supplémentaire.",
+    text: "Grâce à Sam-Host, mes revenus locatifs ont augmenté de 30% sans aucun effort supplémentaire.",
     author: "Marc L., Investisseur à Lyon"
   },
   {
@@ -42,7 +42,7 @@ export default function Testimonials() {
                 animate={{ opacity: index === activeTestimonial ? 1 : 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="bg-amber-50 p-6 rounded-lg shadow-md h-full flex flex-col justify-center">
+                <div className="bg-light-blue-50 p-6 rounded-lg shadow-md h-full flex flex-col justify-center">
                   <p className="mb-4 text-lg  italic">"{testimonial.text}"</p>
                   <p className="font-semibold text-right">- {testimonial.author}</p>
                 </div>
@@ -54,7 +54,7 @@ export default function Testimonials() {
               <button
                 key={index}
                 className={`h-3 w-3 rounded-full mx-1 ${
-                  index === activeTestimonial ? 'bg-orange-500' : 'bg-amber-300'
+                  index === activeTestimonial ? 'bg-light-blue-500' : 'bg-light-blue-200'
                 }`}
                 onClick={() => setActiveTestimonial(index)}
               />

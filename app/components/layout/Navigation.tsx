@@ -3,7 +3,11 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-const navItems = ['Comment ça marche', 'Témoignages', 'Contact']
+const navItems = [
+  { name: 'Comment ça marche', href: '#comment-ca-marche' },
+  { name: 'Témoignages', href: '#temoignages' },
+  { name: 'Contact', href: '#contact' },
+]
 
 export default function Navigation({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (open: boolean) => void }) {
   return (
@@ -11,9 +15,9 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: 
       <nav className="hidden md:block">
         <ul className="flex space-x-6">
           {navItems.map((item) => (
-            <li key={item}>
-              <Link href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-orange-500 transition duration-300">
-                {item}
+            <li key={item.name}>
+              <Link href={item.href} className="hover:text-light-blue-500 transition duration-300">
+                {item.name}
               </Link>
             </li>
           ))}
@@ -29,13 +33,13 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: 
           <nav className="container mx-auto py-4">
             <ul className="space-y-2">
               {navItems.map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="block px-4 py-2 hover:bg-amber-100 transition duration-300"
+                    href={item.href}
+                    className="block px-4 py-2 hover:bg-light-blue-100 transition duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}

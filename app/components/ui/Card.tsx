@@ -6,7 +6,7 @@ const cardVariants = cva(
     variants: {
       variant: {
         default: "bg-white",
-        colored: "bg-amber-50",
+        colored: "bg-light-blue-50",
       },
     },
     defaultVariants: {

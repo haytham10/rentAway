@@ -37,31 +37,31 @@ const iconVariants = {
 
 
 export default function HowItWorks() {
-  return (
-    <section id="comment-ca-marche" className="py-16 bg-gradient-to-br from-amber-50 to-orange-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Comment ça marche</h2>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4">
-          {steps.map((item, index) => (
-            <div key={item.title} className="flex flex-col items-center w-full md:w-1/3">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={iconVariants}
-              >
-                <Card className="w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg hover:shadow-xl transition duration-300">
-                  <item.icon className="h-12 w-12 text-white" />
-                </Card>
-              </motion.div>
-              <div className="mt-6 text-center">
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+	return (
+	  <section id="comment-ca-marche" className="py-16 bg-gradient-to-br from-light-blue-50 to-light-blue-100">
+		<div className="container mx-auto px-4">
+		  <h2 className="text-3xl font-bold text-center mb-12">Comment ça marche</h2>
+		  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4">
+			{steps.map((item, index) => (
+			  <div key={item.title} className="flex flex-col items-center w-full md:w-1/3">
+				<motion.div
+				  initial="hidden"
+				  whileInView="visible"
+				  viewport={{ once: true }}
+				  variants={iconVariants}
+				>
+				  <Card className="w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-br from-light-blue-400 to-light-blue-500 shadow-lg hover:shadow-xl transition duration-300">
+					<item.icon className="h-12 w-12 text-white" />
+				  </Card>
+				</motion.div>
+				<div className="mt-6 text-center">
+				  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+				  <p className="text-gray-600">{item.description}</p>
+				</div>
+			  </div>
+			))}
+		  </div>
+		</div>
+	  </section>
+	)
+  }
