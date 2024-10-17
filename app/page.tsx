@@ -6,6 +6,7 @@ import HowItWorks from './components/home/HowItWorks'
 import Testimonials from './components/home/Testimonials'
 import Cities from './components/home/Cities'
 import ContactForm from './components/home/ContactForm'
+import Services from './components/home/Services'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Benefits />
         <HowItWorks />
+        <Services/>
         <Testimonials />
         <Cities />
         <ContactForm />
