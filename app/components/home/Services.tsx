@@ -6,6 +6,8 @@ import { Card } from '../ui/Card';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const services = [
 	{ 
@@ -75,6 +77,32 @@ function ServiceInfo({ item, index, line, i } : { item: any, index: number, line
 	)
 }
 
+const NextArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: 'block', background: 'none', color: 'black', fontSize: '24px' }}
+            onClick={onClick}
+        >
+            &#9654; {/* Unicode character for right arrow */}
+        </div>
+    );
+};
+
+const PrevArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: 'block', background: 'none', color: 'black', fontSize: '24px' }}
+            onClick={onClick}
+        >
+            &#9664; {/* Unicode character for left arrow */}
+        </div>
+    );
+};
+
 export default function Services() {
 	const settings = {
 		dots: true,
@@ -86,6 +114,8 @@ export default function Services() {
 		centerPadding: '60px',
 		variableWidth: true,
 		adaptiveHeight: true, // Add this line to make the slider take the maximum height of its content
+		nextArrow: <ArrowForwardIosIcon />,
+        prevArrow: <ArrowBackIosNewIcon />,
 	};
 
 	return (
