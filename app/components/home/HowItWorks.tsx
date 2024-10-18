@@ -38,7 +38,7 @@ const iconVariants = {
 
 export default function HowItWorks() {
 	return (
-	  <section id="comment-ca-marche" className="py-16 bg-gradient-to-br from-light-blue-50 to-light-blue-100">
+	  <section id="comment-ca-marche" className="py-16 bg-white">
 		<div className="container mx-auto px-4">
 		  <h2 className="text-3xl font-bold text-center mb-12">Comment ça marche</h2>
 		  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4">

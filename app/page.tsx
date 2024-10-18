@@ -4,9 +4,10 @@ import Hero from './components/home/Hero'
 import Benefits from './components/home/Benefits'
 import HowItWorks from './components/home/HowItWorks'
 import Testimonials from './components/home/Testimonials'
-import Cities from './components/home/Cities'
+import Faq from './components/home/Faq'
 import ContactForm from './components/home/ContactForm'
 import Services from './components/home/Services'
+import Steps from './components/home/Steps'
 
 export default function Home() {
   return (
@@ -14,11 +15,12 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <Benefits />
         <HowItWorks />
-        <Services/>
+        <Benefits />
+        <Services />
+        <Steps />
         <Testimonials />
-        <Cities />
+        <Faq />
         <ContactForm />
       </main>
       <Footer />
